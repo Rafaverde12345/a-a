@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <title>mi contador practica</title>
+</head>
+<body>
+    <h1>CONTADOR</h1>
+    <P>0</P>
+    <button onclick="aumentar()">Mais</button>
+    <button onclick="disminuir()">menos</button>
+    <script>
+        let number = 0;
+        
+        function aumentar() {
+            number = number + 1;
+            document.querySelector("p").innerText = number;
+            console.log(number);
+        }
+
+        function disminuir() {
+            number = number - 1;
+            document.querySelector('p').innerText = number;
+            console.log(number);   
+        }
+    </script>
+</body>
+</html>
