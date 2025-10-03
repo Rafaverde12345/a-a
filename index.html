@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-<head> 
-    <title>mi contador practica</title>
+<html>
+<head>
+    <title>my lista de tareas</title>
 </head>
 <body>
-    <h1>CONTADOR</h1>
-    <P>0</P>
-    <button onclick="aumentar()">Mais</button>
-    <button onclick="disminuir()">menos</button>
-    <script>
-        let number = 0;
-        
-        function aumentar() {
-            number = number + 1;
-            document.querySelector("p").innerText = number;
-            console.log(number);
-        }
+    <h1>Lista de  tareas</h1>
+    
+    <ul></ul>
+    <li>tarea</li>
+    <input placeholder='nueva tarea'>
 
-        function disminuir() {
-            number = number - 1;
-            document.querySelector('p').innerText = number;
-            console.log(number);   
-        }
-    </script>
+    <button onclick="agregado()">agregar</button>
+<script>
+    function agregado() {
+        let ul = document.querySelector("ul");
+        let input = document.querySelector("input");
+        let li = document.querySelector("li");
+        let nuevoli = li.createElement("li");
+        nuevoli.innerText = input.value;
+        ul.appendChild(nuevoli);
+        input.value = "";
+    }
+</script>
 </body>
 </html>
