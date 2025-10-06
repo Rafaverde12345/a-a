@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>my lista de tareas</title>
-</head>
-<body>
-    <h1>Lista de  tareas</h1>
-    
-    <ul></ul>
-    <li>tarea</li>
-    <input placeholder='nueva tarea'>
+    <head>
+        <title>meu contador e minha lista de tarefa</title>
+    </head>
+    <body>
+        <h1>contador</h1>
+        <p id="agg">0</p>
+        <button onclick="sumar()">mas</button>
+        <button onclick="restar()">menos</button>
 
-    <button onclick="agregado()">agregar</button>
-<script>
-    function agregado() {
-        let ul = document.querySelector("ul");
-        let input = document.querySelector("input");
-        let li = document.querySelector("li");
-        let nuevoli = li.createElement("li");
-        nuevoli.innerText = input.value;
-        ul.appendChild(nuevoli);
-        input.value = "";
-    }
-</script>
-</body>
+        <script>
+            let numero = 0
+
+            function sumar() {
+                numero = numero + 1
+                actualizar()
+            }
+
+                function restar() {
+                numero = numero - 1
+                actualizar()
+                }
+
+            function actualizar() {
+                let p = document.querySelector('#agg')
+                p.innerText = numero
+            }
+        </script>
+    </body>
 </html>
