@@ -4,8 +4,29 @@
         <title>meu contador</title>
     </head>
     <body>
-        <h1>lista de tareas</h1>
-        <ul></ul>
+        <h1>contador</h1>
+        <p id="agg">0</p>
+        <button onclick="sumar()">sumar</button>
+        <button onclick="restar()">menos</button>
+        <script>
+            let numero = 0
+
+            function sumar() {
+                numero = numero + 1
+                console.log(numero)
+                actualizarNumero()
+            }
+
+            function restar() {
+                numero = numero - 1
+                console.log(numero)
+                actualizarNumero()
+            }
+            
+            function actualizarNumero() {
+                const p = document.querySelector('#agg')
+                p.innerText = numero
+            }
 
         </script>
     </body>
