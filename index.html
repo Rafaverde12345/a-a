@@ -13,20 +13,17 @@
             
             <script>
                 function agg() {
+                    const ul = document.querySelector('ul')
+                    const input = document.querySelector('input')
+                    const tarea = input.value
 
-                
-                const ul = document.querySelector('ul')
-                const input = document.querySelector('input')
-                const tarea = input.value
+                    const li = document.createElement('li')
+                    li.innerText = tarea
+                    ul.appendChild(li)
 
-                const li = document.createElement('li')
-                li.innerText = tarea
-                ul.appendChild(li)
-
-                input.value = ''
-
-                console.log(ul)
+                    input.value = ''
                 }
+            
             </script>
             
 
