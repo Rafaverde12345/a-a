@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>minha lsita de tarefas</title>
+    </head>
+    <body>
+        <h1>tarefas</h1>
+        <ul>
+
+        </ul>
+            <input>
+            <button onclick="agg()">agregar</button>
+            
+            <script>
+                function agg() {
+
+                
+                const ul = document.querySelector('ul')
+                const input = document.querySelector('input')
+                const tarea = input.value
+
+                const li = document.createElement('li')
+                li.innerText = tarea
+                ul.appendChild(li)
+
+                input.value = ''
+
+                console.log(ul)
+                }
+            </script>
+            
+
+    </body>
+</html>
