@@ -6,19 +6,37 @@
     <body>
         <h1>tarefas</h1>
         <ul>
-
+           
         </ul>
             <input>
             <button onclick="agg()">agregar</button>
             
             <script>
 
-                
+                const array = ['estudiar HTMK', 'estudiarJS']
 
                 function agg() {
                     const input = document.querySelector('input')
+                    const tarea = input.value
+
+                    array.push(tarea)
+                    console.log(array)
+
+                    input.value = ''
+
+                    render()
+                }
+
+                function render() {
+                    ul.innerHTML = ''
+                    const ul = document.querySelector('ul')
+                    const li = document.createElement('li')
+
+                    li.innerText = array.forEach()
+                    ul.appendChild(li)
 
                 }
+                
             
             </script>
             
