@@ -18,26 +18,25 @@
                 function agg() {
                     const input = document.querySelector('input')
                     const tarea = input.value
-
                     array.push(tarea)
-                    console.log(array)
-
                     input.value = ''
 
-                    render()
+                    render() 
                 }
 
-                function render() {
-                    ul.innerHTML = ''
-                    const ul = document.querySelector('ul')
-                    const li = document.createElement('li')
+               function render() {
+                 const ul = document.querySelector('ul')
+                ul.innerHTML = ''
 
-                    li.innerText = array.forEach()
-                    ul.appendChild(li)
+               array.forEach(function(tarea) {
+              const li = document.createElement('li')
+              li.innerText = tarea
+              ul.appendChild(li)
+              })
+          }
 
-                }
-                
-            
+              render()
+
             </script>
             
 
