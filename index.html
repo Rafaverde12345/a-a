@@ -12,31 +12,30 @@
             <button onclick="agg()">agregar</button>
             
             <script>
-
-                const array = ['estudiar HTMK', 'estudiarJS']
-
+                const array = ['estudiarHTML', 'estudiarJS', 'estudiarcss']
+                
                 function agg() {
                     const input = document.querySelector('input')
-                    const tarea = input.value
-                    array.push(tarea)
+                    let novatarefa = input.value
+                    array.push(novatarefa) 
                     input.value = ''
-
-                    render() 
+                    console.log(array)
+                    
+                    render()
                 }
 
-               function render() {
-                 const ul = document.querySelector('ul')
-                ul.innerHTML = ''
-
-               array.forEach(function(tarea) {
-              const li = document.createElement('li')
-              li.innerText = tarea
-              ul.appendChild(li)
-              })
-          }
-
-              render()
-
+                function render() {
+                    const ul = document.querySelector('ul')
+                    ul.innerHTML = ''
+                    
+                    array.forEach(function(tarea) {
+                    const li = document.createElement('li')
+                    li.innerText = tarea
+                    ul.appendChild(li)
+                   
+                    })
+                }
+                render()
             </script>
             
 
