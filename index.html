@@ -16,26 +16,23 @@
                 
                 function agg() {
                     const input = document.querySelector('input')
-                    let novatarefa = input.value
-                    array.push(novatarefa) 
+                    let tarea = input.value
+                    array.push(tarea)
                     input.value = ''
                     console.log(array)
-                    
                     render()
                 }
 
                 function render() {
-                    const ul = document.querySelector('ul')
-                    ul.innerHTML = ''
-                    
-                    array.forEach(function(tarea) {
-                    const li = document.createElement('li')
-                    li.innerText = tarea
-                    ul.appendChild(li)
+                    const ul = createElement('ul')
+
+                    array.foreach(function(tarea)) {
+
+
+                    }
                    
-                    })
+                    
                 }
-                render()
             </script>
             
 
